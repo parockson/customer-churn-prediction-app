@@ -1,6 +1,3 @@
-Here's a detailed template for your `README.md` that covers everything from project introduction to setup, usage, and contributing guidelines:
-
----
 
 # Customer Churn Prediction App
 
@@ -69,7 +66,7 @@ Ensure you have the following installed:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/customer-churn-prediction-app.git
+   git clone https://github.com/parockson/customer-churn-prediction-app.git
    cd customer-churn-prediction-app
    ```
 
@@ -98,7 +95,7 @@ Ensure you have the following installed:
 
 ### Running the App
 
-You can run the application locally using:
+The application will be run locally using streamlit:
 
 ```bash
 streamlit run app.py
@@ -120,7 +117,7 @@ You can modify the preprocessing steps, try different models, or integrate the p
 customer-churn-prediction-app/
 │
 ├── best_models/               # Directory containing persisted pipelines
-├── data/                      # Directory for storing raw and processed data
+├── datasets/                      # Directory for storing raw and processed data
 ├── modelling/                 # Jupyter notebooks and scripts for data exploration and model training
 ├── app.py                     # Main application file
 ├── download_models.py         # Script to download pre-trained models from Google Drive
@@ -187,15 +184,17 @@ Contributions are welcome! Please follow these steps:
 4. Push your changes and open a pull request.
 5. Ensure all code passes linting and tests before submitting.
 
+or contact me on [LinkedIn](linkedin.com/in/prince-acquah-rockson) 
+                 [email](parockson@gmail.com)
+                 [whatsapp](wa.me//233348065337)
+                 [phone](+233248065337)
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Acknowledgments
 
-- Thanks to [Your Organization or People] for support and resources.
+-Thanks to [Azubi Africa (GetInnotized GmBH)](https://azubiafrica.org) for support and resources.
+
 - Special thanks to contributors and the open-source community for their invaluable tools and libraries.
-
----
-
-Feel free to customize the template to fit your specific project needs.
