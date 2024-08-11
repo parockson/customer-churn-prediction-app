@@ -184,10 +184,13 @@ Contributions are welcome! Please follow these steps:
 4. Push your changes and open a pull request.
 5. Ensure all code passes linting and tests before submitting.
 
-or contact me on [LinkedIn](linkedin.com/in/prince-acquah-rockson) 
-                 [email](parockson@gmail.com)
-                 [whatsapp](wa.me//233348065337)
-                 [phone](+233248065337)
+or contact me on [LinkedIn](https://linkedin.com/in/prince-acquah-rockson)
+                 
+[email](parockson@gmail.com)
+                 
+[whatsapp](https://wa.me//233348065337)
+                 
+[phone](+233248065337)
 
 ## License
 
