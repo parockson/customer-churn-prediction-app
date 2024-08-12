@@ -18,7 +18,7 @@ from sklearn.preprocessing._label import LabelEncoder
 import joblib
 import pandas as pd
 from urllib.request import urlopen
-from config import ONE_DAY_SEC, ONE_WEEK_SEC, LGBM_URL, XGBClassifier_URL, RandomForest_URL, ENCODER_URL, ENV_PATH
+from src.config import ONE_DAY_SEC, ONE_WEEK_SEC, LGBM_URL, XGBClassifier_URL, RandomForest_URL, ENCODER_URL, ENV_PATH
 from dotenv import load_dotenv
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager

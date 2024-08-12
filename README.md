@@ -117,13 +117,31 @@ You can modify the preprocessing steps, try different models, or integrate the p
 customer-churn-prediction-app/
 │
 ├── best_models/               # Directory containing persisted pipelines
-├── datasets/                      # Directory for storing raw and processed data
+│   ├── RandomForest_pipeline.joblib  # Random Forest pipeline
+│   └── XGBClassifier_pipeline.joblib # XGBoost pipeline
+├── datasets/                  # Directory for storing raw and processed data
+│   ├── SampleSubmission.csv   # Sample submission file
+│   ├── Test.csv               # Test dataset
+│   ├── Train.csv              # Training dataset
+│   └── VariableDefinitions.csv # Definitions of dataset variables
+├── frontend/                  # Directory for frontend-related files
+│   ├── Dockerfile-front_ReadMe.md # Frontend Dockerfile documentation
+│   ├── download_models.py     # Script to download pre-trained models
+│   └── main.py                # Main file for frontend-related processing
 ├── modelling/                 # Jupyter notebooks and scripts for data exploration and model training
-├── app.py                     # Main application file
-├── download_models.py         # Script to download pre-trained models from Google Drive
+├── src/                       # Source code for the API and utility functions
+│   ├── __pycache__/           # Cached bytecode
+│   ├── api.py                 # FastAPI application code
+│   ├── config.py              # Configuration file for the application
+│   └── Dockerfile-api.txt     # Dockerfile for API-related processes
+├── venv/                      # Virtual environment directory (optional)
+├── .gitattributes             # Git LFS tracking for large files
+├── .gitignore                 # Git ignore file
+├── Home.py                    # Main Streamlit application file
+├── LICENSE                    # Project license
 ├── README.md                  # Project documentation
-├── requirements.txt           # Python dependencies
-└── .gitattributes             # Git LFS tracking for large files
+└── requirements.txt           # Python dependencies
+
 ```
 
 ## Modeling
