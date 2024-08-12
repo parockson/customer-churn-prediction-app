@@ -157,6 +157,88 @@ All models are evaluated using the AUC (Area Under the ROC Curve) metric. The AU
 
 Large files, such as model artifacts, are managed using Git LFS. Ensure you have Git LFS installed and configured before working with the repository.
 
+
+## Streamlit Integration
+
+This repository now includes a Streamlit app that allows you to interactively explore the customer churn prediction models. 
+
+### How to Run the Streamlit App
+
+1. Ensure all dependencies are installed:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Run the Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
+
+3. The app will be available in your web browser at:
+   ```
+   http://localhost:8501
+   ```
+
+### App Features
+
+- **Model Selection**: Choose from a variety of pre-trained models to predict customer churn.
+- **Data Visualization**: Visualize the distribution of customer features and predictions.
+- **Interactive Inputs**: Modify customer features to see how they affect the prediction.
+
+### Streamlit Components
+
+- **app.py**: The main Streamlit application file.
+- **model.py**: Contains the machine learning models used in the application.
+- **utils.py**: Utility functions for data processing and visualization.
+
+## Docker Setup
+
+The repository includes Docker configuration files to containerize the application. Below is the Dockerfile used to set up the environment:
+
+```Dockerfile
+# Use an official Python runtime as a parent image
+FROM python:3.11.7
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the requirements file into the container
+COPY requirements_docker_api.txt /tmp/requirements.txt
+
+# Upgrade pip to the latest version
+RUN python -m pip install --no-cache-dir --upgrade pip
+RUN python -m pip install --no-cache-dir -r /tmp/requirements.txt
+
+# Copy the source code into the container
+COPY . /app
+
+# Expose the port the application runs on
+EXPOSE 8000
+
+# Define the command to run the application
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
+```
+
+### Building the Docker Image
+
+To build the Docker image, run the following command in the root directory of the project:
+
+```bash
+docker build -t customer-churn-app .
+```
+
+### Running the Docker Container
+
+To run the Docker container, execute:
+
+```bash
+docker run -p 8000:8000 customer-churn-app
+```
+
+The application will be available at `http://localhost:8000`.
+
+
+
 ### Common Commands
 
 - **Commit and Push Changes**
@@ -201,3 +283,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 -Thanks to [Azubi Africa (GetInnotized GmBH)](https://azubiafrica.org) for support and resources.
 
 - Special thanks to contributors and the open-source community for their invaluable tools and libraries.
+
